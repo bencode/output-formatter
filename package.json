@@ -1,6 +1,6 @@
 {
   "name": "output-formatter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "format helper for output",
   "main": "lib/index.js",
   "scripts": {
