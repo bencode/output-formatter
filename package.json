@@ -1,0 +1,45 @@
+{
+  "name": "output-formatter",
+  "version": "1.0.0",
+  "description": "format helper for output",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint lib test",
+    "test": "node_modules/.bin/mocha --require 'should' --reporter spec --recursive --bail --check-leaks test/",
+    "cov": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require 'should' --recursive --bail --check-leaks test/",
+    "travis": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require 'should' --recursive --bail --check-leaks test/",
+    "all": "npm run lint && npm run test && npm run cov",
+    "changelog": "node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -w"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint && npm run test",
+      "commit-msg": "node_modules/.bin/validate-commit-msg",
+      "pre-push": "npm run ci"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "~2.1.0",
+    "eslint-config-bce": "~0.5.0",
+    "istanbul": "~0.4.1",
+    "mocha": "~2.4.5",
+    "should": "~8.2.2",
+    "conventional-changelog": "~0.5.1",
+    "validate-commit-msg": "~2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencode/output-formatter.git"
+  },
+  "author": "bencode@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bencode/output-formatter/issues"
+  },
+  "homepage": "https://github.com/bencode/output-formatter#readme"
+}
