@@ -8,15 +8,8 @@
     "test": "node_modules/.bin/mocha --require 'should' --reporter spec --recursive --bail --check-leaks test/",
     "cov": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require 'should' --recursive --bail --check-leaks test/",
     "travis": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require 'should' --recursive --bail --check-leaks test/",
-    "all": "npm run lint && npm run test && npm run cov",
+    "ci": "npm run lint && npm run test && npm run cov",
     "changelog": "node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -w"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run lint && npm run test",
-      "commit-msg": "node_modules/.bin/validate-commit-msg",
-      "pre-push": "npm run ci"
-    }
   },
   "files": [
     "lib"

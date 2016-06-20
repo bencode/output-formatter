@@ -1,6 +1,11 @@
 # output-formatter
 
 
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+
+
 format helper for output
 
 
@@ -69,3 +74,10 @@ console.log(fmt.red('hello world'));
 console.log(fmt.yellow('warning'));
 ```
 
+
+[npm-image]: https://img.shields.io/npm/v/output-formatter.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/output-formatter
+[travis-image]: https://img.shields.io/travis/bencode/output-formatter/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/bencode/output-formatter
+[coveralls-image]: https://img.shields.io/codecov/c/github/bencode/output-formatter.svg?style=flat-square
+[coveralls-url]: https://codecov.io/github/bencode/output-formatter?branch=master
